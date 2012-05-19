@@ -1,0 +1,198 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>reveal.js</title>
+
+		<meta name="description" content="An easy to use CSS 3D slideshow tool for quickly creating good looking HTML presentations.">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="reveal.js/css/reset.css">
+		<link rel="stylesheet" href="reveal.js/css/main.css">
+		<link rel="stylesheet" href="reveal.js/css/print.css" type="text/css" media="print">
+
+		<link rel="stylesheet" href="reveal.js/lib/zenburn.css">
+	</head>
+	
+	<body>
+		
+		<div id="reveal">
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+            <style>
+                .after{
+                    clear:both;
+                    float:left;
+                    text-align: left;
+                    width: 100%
+                }
+                .after p{
+                    font-family:"Palatino", Times, serif;
+                    font-size:0.75em;                    
+                }
+                
+                .after hr{
+                    color: black;
+                    background-color: black;
+                    height: 5px;   
+                }
+                .title{
+                    font-family:"Palatino", Times, serif;
+                    letter-spacing:10px;
+                    margin-top:100px;
+                    font-size:2em;
+                }
+                
+                .right{
+                    float: right;
+                }
+                
+                .left{
+                    float: left;   
+                }
+                
+                .novel-text{
+                    font-family:"Palatino", Times, serif;
+                    margin-left: 100px;
+                    margin-right: 100px;
+
+                    text-align:justify;
+                    font-size:0.7em;
+                    text-indent: 2em;
+                }
+                
+                .novel-text.para{
+                    margin-top:40px;
+                }
+                .red{
+                    color: red;
+                }
+                
+                .black{
+                    color: black;   
+                }
+                .white .state-background{
+                    background-color:white;
+                }    
+                .state-background {
+                    background-color:black;
+                }
+            </style>				
+                <section data-state="intro">
+                    <p class="title red">PHONEGAP</p>
+                </section>
+				
+                <section data-state="intro">
+                    <p class="novel-text para">Early in the 21st century, THE NITOBI CORPORATION
+                    advanced mobile development with a tool known as
+                    <em class="red">PhoneGap.</em></p>
+
+                    <p class="novel-text para fragment visible "><em>PhoneGap</em> was created 
+                    with a web first mentality. Using HTML, JS, and CSS - developers could make
+                    cross platform web applications that launched natively.</p>
+                    
+                    <p class="novel-text para fragment visible ">Native applications could now 
+                    be written entirely with web tools using <em>PhoneGap</em>.</p>     
+                    
+                    <p class="novel-text para fragment visible ">This was not called retirement.</p> 
+                    <p class="novel-text fragment visible ">It was called evolution.</p> 
+                </section>
+                
+                <section data-state="white">
+                    <div>
+                        <img class="left" src="me_grid.png" />
+                        <p class="title right black">ABOUT</p> 
+                     </div>
+                    <div class="after black">
+                        <hr />
+                        <p>Tim Kim</p>
+                        <p>@timkim</p>
+                        <p>timk@adobe.com</p>
+                        <p><3 Movie quotes, JS, and SC</p>
+                    </div>
+                </section>
+                
+				<section>
+					<h1>Finish</h1>
+					<h3 class="inverted">Tim Kim/@timkim</h3>
+				</section>
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+		
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
+		<script src="reveal.js/lib/highlight.js"></script>
+		<script src="reveal.js/lib/classList.js"></script>
+		
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			// Fires when a slide with data-state=customevent is activated
+			Reveal.addEventListener( 'customevent', function() {
+				alert( '"customevent" has fired' );
+			} );
+
+			// Fires each time a new slide is activated
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				// event.indexh & event.indexv
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Loops the presentation, defaults to false
+				loop: false,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+
+	</body>
+</html>
