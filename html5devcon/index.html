@@ -19,23 +19,12 @@
 		<link rel="stylesheet" href="reveal.js/css/print.css" type="text/css" media="print">
 
 		<link rel="stylesheet" href="reveal.js/lib/zenburn.css">
-	</head>
-	
-	<body>
-		
-		<div id="reveal">
-
-			<!-- Used to fade in a background when a specific slide state is reached -->
-			<div class="state-background"></div>
-			
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
             <style>
                 .after{
                     clear:both;
                     float:left;
                     text-align: left;
-                    width: 100%
+                    width: 100%;
                 }
                 .after p{
                     font-family:"Palatino", Times, serif;
@@ -47,6 +36,10 @@
                     background-color: black;
                     height: 5px;   
                 }
+                
+                .after .caption{
+                    text-align: center;   
+                }
                 .title{
                     font-family:"Palatino", Times, serif;
                     letter-spacing:10px;
@@ -54,6 +47,14 @@
                     font-size:2em;
                 }
                 
+                .pic{
+                    margin-top: 100px;   
+                }
+                
+                .pic .clean{
+                    border: none;
+                    background: none;
+                }
                 .right{
                     float: right;
                 }
@@ -75,6 +76,7 @@
                 .novel-text.para{
                     margin-top:40px;
                 }
+                
                 .red{
                     color: red;
                 }
@@ -82,15 +84,29 @@
                 .black{
                     color: black;   
                 }
+                
                 .white .state-background{
                     background-color:white;
-                }    
+                }
+                
                 .state-background {
                     background-color:black;
                 }
-            </style>				
+            </style>	
+	</head>
+	
+	<body>
+		
+		<div id="reveal">
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">			
                 <section data-state="intro">
                     <p class="title red">PHONEGAP</p>
+                    <img class="pic" style="margin-top: 100px; border: none; background: none;" src="cordova.png" />
                 </section>
 				
                 <section data-state="intro">
@@ -123,6 +139,163 @@
                     </div>
                 </section>
                 
+                <section data-state="white">
+                    <div>
+                        <img class="left" src="web_to_native.png" />
+                        <p class="title right black">WHAT</p>
+                    </div>
+                    <div class="after black">
+                        <hr />
+                        <p>A way to build cross platform native applications using web technologies.</p>
+                        <ul>
+                            <li>
+                                <p class="fragment visible ">Use your favourite web technology!</p>
+                            </li>
+                            <li>
+                                <p class="fragment visible ">Access device functionality with PhoneGap API</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                        
+                <section data-state="white">
+                    <section>
+                        <div>
+                            <p class="title right black">API</p>
+                        </div>
+                        
+                        <div class="after black">
+                            <hr />
+                            <ul>
+                                <li><p>The most common set of device functionality</p></li>
+                                <li><p class="fragment visible">Accessible through JS</p></li>
+                                <li><p class="fragment visible">docs.phonegap.com</p></li>
+                            </ul>
+                           
+                        </div>
+                    </section>
+                    <section>
+                        <div>
+                            <p class="title right black">Geolocation</p>
+                        </div>
+                        <div class="after black">
+                            <hr />
+                        <pre><code contenteditable style="font-size: 18px; margin-top: 20px;">var win = function(position) { console.log(position.coords) },
+
+fail = console.log(‘I failed’);
+
+navigator.geolocation.getCurrentPostion(win, fail);
+					   </code></pre> 
+                        </div>
+                    </section>
+                    <section>
+                        <div>
+                            <p class="title right black">Vibration</p>
+                        </div>
+                        <div class="after black">
+                            <hr />
+                        <pre><code contenteditable style="font-size: 18px; margin-top: 20px;">navigator.vibrate(1000);
+
+navigator.vibrate([1000]);
+
+navigator.vibrate([1000, 500, 2000]);
+					   </code></pre> 
+                        </div>                     
+                    </section>
+                    <section>
+                        <div>
+                            <p class="title right black">App Lifecycle</p>
+                        </div>
+                        <div class="after black">
+                            <hr />
+                        <pre><code contenteditable style="font-size: 18px; margin-top: 20px;">document.addEventListener('deviceready', appInit, false);
+document.addEventListener('pause', appPause, false);
+document.addEventListener('resume', appResume, false);
+
+var appInit = function() {
+    alert('app initd');
+}
+
+var appPause = function() {
+    alert('paused');
+}
+
+var appResume = function() {
+    alert('resume');
+}
+					   </code></pre> 
+                        </div>                     
+                    </section>
+                    
+                    <section>
+                        <img class="pic" src="cockpit.png" />
+                        <div class="after black">
+                            <p class="caption">Go to docs.phonegap.com for the rest.</p>
+                        </div>
+                    </section>
+                </section>
+                        
+                <section data-state="white">
+                        <div>
+                            <p class="title right black">PLUGINS</p>
+                        </div>
+                        <div class="after black">
+                            <hr />
+                            <ul>
+                                <li><p>Extend your PhoneGap app with plugins</p></li>
+                                <li><p class="fragment visible ">All of the objects in the api are plugins</p></li>
+                                <li><p class="fragment visible ">Write native implementation then use JS to call that function</p></li>
+                                <li><p class="fragment visible">Still a work in progress, but check out https://github.com/phonegap/phonegap-plugins
+                                </li>
+                            </ul>
+                        </div>                    
+                </section>
+                
+                <section data-state="white">
+                        <img class="pic" src="smile.png" />
+                        <div class="after black">
+                            <p class="caption">Nice</p>
+                        </div>                    
+                </section>
+                    
+                <section data-state="white">
+                        <div>
+                            <img class="left" src="devs_platform.png" />
+                            <p class="title right black">WHY</p>
+                        </div>
+                        <div class="after black">
+                            <hr />
+                            <ul>
+                                <li><p>Reuse web technology</p></li>
+                                <li><p class="fragment visible ">One common code base</p></li>
+                                <li><p class="fragment visible ">More web developers than native developers</p></li>
+                            </ul>
+                        </div>   
+                </section>
+
+                <section data-state="white">
+                        <img class="pic" src="motto.png" />
+                        <div class="after black">
+                            <p class="caption">Write once <em>debug</em> everywhere</p>
+                        </div>                    
+                </section>
+
+                <section data-state="white">
+                        <div>
+                            <img class="left" src="build.png" />
+                            <p class="title right black">BUILD</p>
+                        </div>
+                        <div class="after black">
+                            <hr />
+                            <ul>
+                                <li><p>PhoneGap in the cloud!</p></li>
+                                <li><p class="fragment visible">Deploy to multiple platforms quickly</p></li>
+                                <li><p class="fragment visible">Open beta: build.phonegap.com
+                                </li>
+                            </ul>
+                        </div>                    
+                </section>
+                    
 				<section>
 					<h1>Finish</h1>
 					<h3 class="inverted">Tim Kim/@timkim</h3>
@@ -141,7 +314,7 @@
 			<div class="progress"><span></span></div>
 			
 		</div>
-		
+    
 		<script src="reveal.js/js/reveal.js"></script>
 
 		<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
@@ -153,11 +326,6 @@
 			var query = {};
 			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
 				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
-			} );
-
-			// Fires when a slide with data-state=customevent is activated
-			Reveal.addEventListener( 'customevent', function() {
-				alert( '"customevent" has fired' );
 			} );
 
 			// Fires each time a new slide is activated
