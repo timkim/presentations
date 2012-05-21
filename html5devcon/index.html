@@ -4,10 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		
-		<title>reveal.js</title>
-
-		<meta name="description" content="An easy to use CSS 3D slideshow tool for quickly creating good looking HTML presentations.">
-		<meta name="author" content="Hakim El Hattab">
+		<title>PhoneGap</title>
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -28,7 +25,7 @@
                 }
                 .after p{
                     font-family:"Palatino", Times, serif;
-                    font-size:0.75em;                    
+                    font-size: 0.75em;                    
                 }
                 
                 .after hr{
@@ -106,7 +103,6 @@
 			<div class="slides">			
                 <section data-state="intro">
                     <p class="title red">PHONEGAP</p>
-                    <img class="pic" style="margin-top: 100px; border: none; background: none;" src="cordova.png" />
                 </section>
 				
                 <section data-state="intro">
@@ -114,15 +110,15 @@
                     advanced mobile development with a tool known as
                     <em class="red">PhoneGap.</em></p>
 
-                    <p class="novel-text para fragment visible "><em>PhoneGap</em> was created 
+                    <p class="novel-text para fragment visible"><em>PhoneGap</em> was created 
                     with a web first mentality. Using HTML, JS, and CSS - developers could make
                     cross platform web applications that launched natively.</p>
                     
-                    <p class="novel-text para fragment visible ">Native applications could now 
+                    <p class="novel-text para fragment visible">Native applications could now 
                     be written entirely with web tools using <em>PhoneGap</em>.</p>     
                     
-                    <p class="novel-text para fragment visible ">This was not called retirement.</p> 
-                    <p class="novel-text fragment visible ">It was called evolution.</p> 
+                    <p class="novel-text para fragment visible">This was not called retirement.</p> 
+                    <p class="novel-text fragment visible">It was called evolution.</p> 
                 </section>
                 
                 <section data-state="white">
@@ -135,7 +131,7 @@
                         <p>Tim Kim</p>
                         <p>@timkim</p>
                         <p>timk@adobe.com</p>
-                        <p><3 Movie quotes, JS, and SC</p>
+                        <p>Movies, JS, and SC</p>
                     </div>
                 </section>
                 
@@ -146,13 +142,16 @@
                     </div>
                     <div class="after black">
                         <hr />
-                        <p>A way to build cross platform native applications using web technologies.</p>
+                        
                         <ul>
                             <li>
-                                <p class="fragment visible ">Use your favourite web technology!</p>
+                                <p>iOS, Android, Blackberry, webOS, WP7, Bada</p>
                             </li>
                             <li>
-                                <p class="fragment visible ">Access device functionality with PhoneGap API</p>
+                                <p class="fragment visible">Use your favourite web technology!</p>
+                            </li>
+                            <li>
+                                <p class="fragment visible">Access device functionality with PhoneGap API</p>
                             </li>
                         </ul>
                     </div>
@@ -243,10 +242,9 @@ var appResume = function() {
                             <hr />
                             <ul>
                                 <li><p>Extend your PhoneGap app with plugins</p></li>
-                                <li><p class="fragment visible ">All of the objects in the api are plugins</p></li>
-                                <li><p class="fragment visible ">Write native implementation then use JS to call that function</p></li>
-                                <li><p class="fragment visible">Still a work in progress, but check out https://github.com/phonegap/phonegap-plugins
-                                </li>
+                                <li><p class="fragment visible">All of the objects in the api are plugins</p></li>
+                                <li><p class="fragment visible">Write native implementation then use JS to call that function</p></li>
+                                <li><p class="fragment visible">Still a work in progress, but check out github.com/phonegap/phonegap-plugins</p></li>
                             </ul>
                         </div>                    
                 </section>
@@ -267,8 +265,8 @@ var appResume = function() {
                             <hr />
                             <ul>
                                 <li><p>Reuse web technology</p></li>
-                                <li><p class="fragment visible ">One common code base</p></li>
-                                <li><p class="fragment visible ">More web developers than native developers</p></li>
+                                <li><p class="fragment visible">One common code base</p></li>
+                                <li><p class="fragment visible">More web developers than native developers</p></li>
                             </ul>
                         </div>   
                 </section>
@@ -290,15 +288,42 @@ var appResume = function() {
                             <ul>
                                 <li><p>PhoneGap in the cloud!</p></li>
                                 <li><p class="fragment visible">Deploy to multiple platforms quickly</p></li>
-                                <li><p class="fragment visible">Open beta: build.phonegap.com
-                                </li>
+                                <li><p class="fragment visible">Open beta: build.phonegap.com</p></li>
                             </ul>
                         </div>                    
                 </section>
                     
-				<section>
-					<h1>Finish</h1>
-					<h3 class="inverted">Tim Kim/@timkim</h3>
+                <section data-state="white">
+                        <div>
+                            <p class="title right black">OSS</p>
+                        </div>
+                        <div class="after black">
+                            <hr />
+                            <ul>
+                                <li><p>PhoneGap is free and open source</p></li>
+                                <li><p class="fragment visible">Donated to Apache foundation</p></li>
+                                <li><p class="fragment visible">Apache Cordova (formerly known as Callback)</p></li>
+                                <li><p class="fragment visible">Lots of contributors: Adobe, IBM, RIM, Microsoft, and other individuals</p></li>
+                                <li><p class="fragment visible">Contribute back today: incubator.apache.org/cordova </p></li>
+                            </ul>
+                        </div>                    
+                </section> 
+                
+                <section data-state="white">
+                        <img class="pic" src="demo.png" />
+                        <div class="after black">
+                            <p class="caption">Demo time!</p>
+                        </div>                    
+                </section>
+                            
+				<section data-state="black">
+					<p class="title red">FINISH</p>
+                    <p class="novel-text para">You're in a desert, walking along in the sand, when all of a sudden you look down and see
+                    a tortoise. It's crawling toward you. You reach down and flip the tortoise on its back. The tortoise lays on its back,
+                    its belly baking in the hot sun, beating its legs trying to turn itself over, but it can't. Not without your help. But
+                    you're not helping. Why is that?</p>
+					<p class="novel-text para">Author: Tim Kim/@timkim</p>
+                    <p class="novel-text para">Images from Blade Runner</p>
 				</section>
 			</div>
 
